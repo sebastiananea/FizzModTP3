@@ -1,7 +1,7 @@
-import { getTimeNow} from '. /utils/functions.js';
+import { getTimeNow } from './utils/functions.js';
 import express from 'express' ;
-const     app = express(),
-          PORT = 8080;
+const  app = express();
+const  PORT = 8080;
  
 
 app.get('/',(req, res) => {
