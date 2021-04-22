@@ -16,7 +16,7 @@ const randomNumbers = () => {
            }
     }
 
-
+    console.log(nums)
     return nums
 }
 
