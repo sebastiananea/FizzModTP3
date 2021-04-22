@@ -1,11 +1,17 @@
-import { getTimeNow } from './utils/functions.js';
+import getTimeNow from './utils/time.js';
+import randomNumbers from './utils/random.js';
 import express from 'express' ;
-const  app = express();
-const  PORT = 8080;
+
+const app  = express(),
+      PORT = 8080;
  
 
 app.get('/',(req, res) => {
-  res.send('Servidor Express OK')
+  res.send(getTimeNow())
+})
+
+app.get('/random',(req, res) => {
+  res.send(randomNumbers())
 })
  
 app.listen(PORT, () => {
