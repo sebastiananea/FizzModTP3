@@ -1,5 +1,6 @@
 import randomNumbers from './utils/random.js';
-import proyectInfo from './utils/info.js'
+import proyectInfo from './utils/info.js';
+import operation from './utils/operaciones.js'
 import express from 'express' ;
 
 const app  = express(),
@@ -13,6 +14,10 @@ app.get('/random',(req, res) => {
 
 app.get('/info',async (req, res) => {
   res.send(await proyectInfo())
+})
+
+app.get('/operaciones',async (req, res) => {
+  res.send(operation(req.query));
 })
  
 const server = app.listen(process.env.PORT || PORT, () => {
