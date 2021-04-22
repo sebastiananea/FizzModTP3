@@ -5,10 +5,18 @@
 
 const randomNumbers = () => {
 
-    const nums = [] ;
+    let nums = {} ;
     for(let i=0; i<10000; i++){
-        nums[i] = Math.round(Math.random() * (21 - 1) + 1.)
+        let random = Math.round(Math.random() * (20 - 1) + 1.)
+        if(!nums[random]) {
+            nums[random] = 1
+           }
+           else {
+               nums[random]++
+           }
     }
+
+
     return nums
 }
 
